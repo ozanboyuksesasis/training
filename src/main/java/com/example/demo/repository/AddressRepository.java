@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface AddressRepository extends JpaRepository<Address,Long> {
 
-	List<Address> findAllByStudent(Student student);
+	//List<Address> findAllByStudent(Student student);
 
-	@Query("select a from Address a left join fetch a.student where a.student.id =:studentId")
-	List<Address> findAllByStudentId(Long studentId);
+	/*@Query("select a from Address a left join fetch a.student where a.student.id =:studentId")
+	List<Address> findAllByStudentId(Long studentId);*/
 
 }

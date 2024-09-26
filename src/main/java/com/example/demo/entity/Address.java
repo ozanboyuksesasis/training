@@ -15,7 +15,4 @@ public class Address {
 
 	String ilce;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	Student student;
-
 }

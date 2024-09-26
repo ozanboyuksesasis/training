@@ -29,7 +29,7 @@ public class AddressService {
 
 	@Transactional
 	public ResponseObj save(Address address) {
-		if (address.getStudent() == null || (address.getStudent() != null && address.getStudent().getId() == null)){
+		/*if (address.getStudent() == null || (address.getStudent() != null && address.getStudent().getId() == null)){
 			return new ResponseObj("Ögrenci boş olamaz.",false,null);
 		}
 
@@ -41,6 +41,9 @@ public class AddressService {
 
 		return new ResponseObj(Constant.Message.SAVED_MESSAGE,true,addressRepository.save(address));
 
+		 */
+
+		return null;
 	}
 
 	public ResponseObj delete(Long id) {
@@ -59,12 +62,14 @@ public class AddressService {
 
 		if (!existsStudentOpt.isPresent()){
 			return new ResponseObj(Constant.Message.StudentMessages.STUDENT_NOT_FOUND,false,null);
-		}*/
+		}
 
 		List<Address> addressList = addressRepository.findAllByStudentId(studentId);
 
+		 */
 
-		return new ResponseObj(null,true,addressList);
+
+		return new ResponseObj(null,true,null);
 
 	}
 
@@ -75,7 +80,7 @@ public class AddressService {
 			return new ResponseObj(Constant.Message.StudentMessages.STUDENT_NOT_FOUND,false,null);
 		}
 
-		List<Address> addressList = addressRepository.findAllByStudent(student);
+		List<Address> addressList = null;//= addressRepository.findAllByStudent(student);
 
 		return new ResponseObj(null,true,addressList);
 
