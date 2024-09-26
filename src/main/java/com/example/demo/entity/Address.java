@@ -15,4 +15,7 @@ public class Address {
 
 	String ilce;
 
+	@ManyToOne
+	Student student;
+
 }

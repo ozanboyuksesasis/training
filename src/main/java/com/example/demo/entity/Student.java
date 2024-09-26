@@ -22,8 +22,7 @@ public class Student {
 
 	String tc;
 
-	@OneToMany
-	@JoinColumn(name = "student_id", referencedColumnName = "id")
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
 	@JsonIgnore
 	List<Address> addressList;
 
