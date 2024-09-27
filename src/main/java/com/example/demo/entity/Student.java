@@ -22,7 +22,7 @@ public class Student {
 
 	String tc;
 
-	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "student")
 	@JsonIgnore
 	List<Address> addressList;
 
